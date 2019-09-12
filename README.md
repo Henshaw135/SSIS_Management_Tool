@@ -1,6 +1,10 @@
 # SSIS_Management_Tool
 SSIS Management tool that executes SSIS Packages from a control table and records logs.  Useful for running multiple SSIS packages.
 
+Important: 
+  The SQL Server requires this permission to allow the xp_CMDShell to execute for this tool to work
+  All SSIS Packages the pull from folders, the server will need permissions to those folders
+
 This SSIS Management Tool runs SSIS Packages that are stored in the control table.  Typically I create a excel file and load the table in so the excel file is the only place needed to update to add new SSIS packages to the list.
 
 The way this tool has the data flow through is:
