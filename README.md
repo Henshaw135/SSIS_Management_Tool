@@ -12,15 +12,19 @@ Control_SSIS --> SP_Control_SSIS --> SSIS_Logs
 
 To run SP_Control_SSIS:
 Running the Stored Procedure can use 'ALL' or a specific package/category and has the structure of:
-EXEC SSIS.SP_Control_SSIS <SSIS Name>, <Report Group>, <Frequency>
+EXEC SSIS.SP_Control_SSIS 'SSIS Name', 'Report Group', 'Frequency'
 
 Examples:
   To Run Daily (If there is daily in frequency of the control table)
+  
    EXEC SSIS.SP_Control_SSIS 'All','All','Daily'
+   
   To Run Specific Package
+  
    EXEC SSIS.SP_Control_SSIS 'Report_Package','All','All'
    
 Project Parts:
+
 Control_SSIS - Table used as resource of all SSIS packages the stored procedure calls
 
 SP_Control_SSIS - Where all the magic happens.  This stored procedure runs all of the SSIS Packages and stores results in the logs table
