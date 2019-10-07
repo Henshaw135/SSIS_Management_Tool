@@ -14,7 +14,8 @@ Control_SSIS --> SP_Control_SSIS --> SSIS_Logs
 
 Running the Stored Procedure can use 'ALL' or a specific package/category and has the structure of: EXEC SSIS.SP_Control_SSIS 'SSIS Name', 'Report Group', 'Frequency'
 
-Examples: To Run Daily (If there is daily in frequency of the control table)
+Examples: 
+### To Run Daily (If there is daily in frequency of the control table)
 
 `EXEC SSIS.SP_Control_SSIS 'All','All','Daily'`
 
